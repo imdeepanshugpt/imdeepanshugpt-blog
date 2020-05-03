@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Deepanshu Gupta's Blog`,
+    title: `Personal Blog by Deepanshu Gupta`,
     author: {
       name: `Deepanshu Gupta`,
       summary: `who is a full stack javascript developer lives in bengaluru.`,
@@ -12,6 +12,12 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        enableIdentityWidget: false,
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
