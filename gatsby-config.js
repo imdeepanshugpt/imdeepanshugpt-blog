@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Personal Blog by Deepanshu Gupta`,
+    title: `Personal Blogs by Deepanshu Gupta`,
     author: {
       name: `Deepanshu Gupta`,
-      summary: `who is a full stack javascript developer lives in bengaluru.`,
+      summary: `who is a full stack javascript developer.`,
     },
     description: `Personal blogging website of Deepanshu Gupta.`,
     siteUrl: `https://deepanshugupta.info/`,
