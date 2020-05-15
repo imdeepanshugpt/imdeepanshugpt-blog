@@ -57,7 +57,9 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author.name}</strong> {author.summary}
+        Written by <a href="https://deepanshugupta.info"><strong>{author.name}</strong></a>
+        {` `}
+        {author.summary}
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
           You should follow him on Twitter

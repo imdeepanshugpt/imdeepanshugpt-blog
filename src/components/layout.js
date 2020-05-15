@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -32,6 +32,7 @@ const Layout = ({ location, title, children }) => {
         style={{
           fontFamily: `Roboto, sans-serif`,
           marginTop: 0,
+          color: 'grey'
         }}
       >
         <Link
@@ -41,7 +42,7 @@ const Layout = ({ location, title, children }) => {
           }}
           to={`/`}
         >
-          {title}
+          Home
         </Link>
       </h3>
     )
