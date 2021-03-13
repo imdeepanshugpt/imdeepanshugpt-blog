@@ -12,7 +12,7 @@ What is service worker?
 
 A service worker is a script that is run by the browser in the background. It does not interact with the actual app and even the usual user won’t know anything about it. Service worker is a programmable network proxy, allowing you to control how network requests from your page are handled.
 
-![service worker](assets/1_ygpxawyxcterjjm1-qmi1q.png "service worker")
+![service worker](../assets/1_ygpxawyxcterjjm1-qmi1q.png "service worker")
 
 Service worker cache the web pages along with other resources, in a separate storage area called CacheStorage.
 
@@ -22,7 +22,7 @@ A service worker has a lifecycle that is completely separate from your web page.
 
 These are the following lifecycle of a service worker.
 
-![service worker life cycle](assets/1_cxwnkswbpbkfbh97ceas5a.png "service worker life cycle")
+![service worker life cycle](../assets/1_cxwnkswbpbkfbh97ceas5a.png "service worker life cycle")
 
 Let’s start with adding a service worker file in your react application.
 
@@ -34,21 +34,21 @@ If you have created your react application using your own configuration then you
 
 If you have create your app using create-react-app then you should delete serviceWorker.js file and remove the following code from index.js.
 
-![index.js file](assets/1_xjsthoj3hmiz0jpkcmwlbw.png "code of index.js")
+![index.js file](../assets/1_xjsthoj3hmiz0jpkcmwlbw.png "code of index.js")
 
 Step 3. Create a sw.js file in your public folder of root directory and add the following javascript code in index.html file of public folder.
 
-![index.html code](assets/2code.png "code of index.html script")
+![index.html code](../assets/2code.png "code of index.html script")
 
 In the above code we are checking serviceWorker in navigator object ( Which is used for browser detection ) and we are registering service worker with the scope of root directory then after registration we are checking service worker is ready or not.Through the above step service worker will get activated and start running but still application will not work offline because we haven’t written any code for caching and fetching any static content in sw.js file.
 
 but if you will check application tab of app. you can see something like this.
 
-![ApplicationTAB](assets/3code.jpeg "Application tab of developer tools")
+![ApplicationTAB](../assets/3code.jpeg "Application tab of developer tools")
 
 Step 4. Now open your sw.js file and add the following code.
 
-![InstallServiceWorker](assets/4code.jpeg "Install code of service worker")
+![InstallServiceWorker](../assets/4code.jpeg "Install code of service worker")
 
 **Install event listener**opens the caches object and then populates it with the list of resources that we want to cache. One important thing about the**addAll operation**is that it’s all or nothing. If one of the files is not present or fails to be fetched, the entire addAll operation fails.
 
@@ -56,7 +56,7 @@ we have added a listener during installation event of service worker and we will
 
 Step 5 (**Activation Event**): Now we will check that our service worker will get activated or not so add the following code to sw.js.
 
-![ActivationEvent](assets/5code.jpeg "Activate Event")
+![ActivationEvent](../assets/5code.jpeg "Activate Event")
 
 **Activation Event Listener** will check activating state of service worker.
 
@@ -70,7 +70,7 @@ If we are using our application offline then it will take from cache storage.
 
 (**navigator.onLine condition** is useful to fetch new static changes of our app).
 
-![](assets/6code.jpeg)
+![](../assets/6code.jpeg)
 
 Now your application is ready to work offline.
 
